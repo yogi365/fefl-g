@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <!-- https://jsonplaceholder.typicode.com/posts?userId=2 -->
+    <input type="text" id="name" placeholder="Enter your Name" /> </br>
+    <input type="email" id="email" placeholder="Enter your Name" /> </br>
+    <input type="password" id="pass" placeholder="Enter your Name" /> </br>
+    <button onclick="signup()">Signup</button>
+    <button onclick="login()">Login</button>
+    <script>
+
+        (
+            function ()
+            {
+                // axios.get('https://jsonplaceholder.typicode.com/posts?userId=1')
+                //     .then(data => console.log(data));
+
+                // axios.get("https://jsonplaceholder.typicode.com/posts", {
+                //     params: {
+                //         userId: 1
+                //     }
+                // }).then(data => console.log(data));
+            }
+
+        )();
+        function login()
+        {
+
+        }
+
+        function signup()
+        {
+            const userDetails = fetchDatatoObject();
+            axios.post('https://testingapi-d1u3.onrender.com/signup', userDetails)
+                .then(data => console.log(data));
+        }
+
+        function fetchDatatoObject()
+        {
+            const name = document.querySelector('#name');
+            const email = document.querySelector('#email');
+            const password = document.querySelector('#pass')
+
+            return { name: name, email: email, pass: password };
+        }
+    </script>
+</body>
+
+</html>
