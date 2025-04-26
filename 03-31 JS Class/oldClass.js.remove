@@ -1,0 +1,36 @@
+// function Person(firstName, secondName)
+// {
+//     this.firstName = firstName;
+//     this.secondName = secondName;
+
+//     return (this.firstName, this.secondName);
+// }
+
+// Person.prototype.getFullName = function ()
+// {
+//     return `${this.firstName} ${this.secondName}`;
+// }
+
+// var john = new Person("Abc", "Xyz");
+// console.log(john.getFullName());
+
+
+// class Person
+// {
+//     fName = ""
+//     sname = ""
+//     constructor(firstName, secondName)
+//     {
+//         this.fName = firstName;
+//         this.sName = secondName;
+//     }
+
+//     getFullName()
+//     {
+//         return `${this.fName} ${this.sName}`;
+//     }
+// }
+
+
+var john = new Person("John", "Doe");
+console.log(john.getFullName());
